@@ -26,7 +26,7 @@ export {
  * @returns {{ auditLog, checkpoint, compliance }}
  *
  * @example
- * import { createGovernance, PostgresAdapter } from 'agent-governance-sdk';
+ * import { createGovernance, PostgresAdapter } from '@agent-governance-sdk/sdk';
  *
  * const adapter = new PostgresAdapter({ client: supabase });
  * const { auditLog, checkpoint, compliance } = createGovernance(adapter, {

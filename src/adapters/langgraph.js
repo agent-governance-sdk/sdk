@@ -3,7 +3,7 @@
  * Wraps LangGraph node execution in governance audit entries.
  *
  * @example
- * import { governedNode } from 'agent-governance-sdk/adapters/langgraph';
+ * import { governedNode } from '@agent-governance-sdk/sdk/adapters/langgraph';
  *
  * const scoringNode = governedNode(auditLog, {
  *   agent: 'scoring',

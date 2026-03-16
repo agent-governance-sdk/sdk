@@ -1,5 +1,5 @@
 /**
- * LangChain integration example — agent-governance-sdk
+ * LangChain integration example — @agent-governance-sdk/sdk
  *
  * Requires: npm install @langchain/anthropic
  * Set ANTHROPIC_API_KEY in your environment.

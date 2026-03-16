@@ -98,7 +98,7 @@ export class HumanCheckpoint {
       owner_id: this.ownerId,
       decision,
       rationale: rationale || null,
-      context: context ? JSON.stringify(context) : null,
+      context: context || null,
       decided_at: new Date().toISOString(),
     });
   }

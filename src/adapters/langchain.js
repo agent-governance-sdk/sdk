@@ -4,7 +4,7 @@
  *
  * @example
  * import { ChatAnthropic } from '@langchain/anthropic';
- * import { withGovernance } from 'agent-governance-sdk/adapters/langchain';
+ * import { withGovernance } from '@agent-governance-sdk/sdk/adapters/langchain';
  *
  * const model = new ChatAnthropic({ model: 'claude-sonnet-4-6' });
  * const governedModel = withGovernance(model, auditLog, {

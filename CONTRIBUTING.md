@@ -1,12 +1,12 @@
-# Contributing to agent-governance-sdk
+# Contributing to @agent-governance-sdk/sdk
 
 We welcome contributions. This project is MIT licensed and intended as a community standard for AI agent governance.
 
 ## Development
 
 ```bash
-git clone https://github.com/aptum/agent-governance-sdk.git
-cd agent-governance-sdk
+git clone https://github.com/agent-governance-sdk/sdk.git
+cd sdk
 npm install
 npm test
 ```

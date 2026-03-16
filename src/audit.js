@@ -102,7 +102,7 @@ export class AuditLog {
       };
 
       this.adapter.insertAuditEntry(entry).catch(err => {
-        console.error('[agent-governance-sdk] Audit log write failed:', err.message);
+        console.error('[@agent-governance-sdk/sdk] Audit log write failed:', err.message);
       });
     }
   }
@@ -124,7 +124,7 @@ export class AuditLog {
     };
 
     await this.adapter.insertAuditEntry(entry).catch(err => {
-      console.error('[agent-governance-sdk] Audit log write failed:', err.message);
+      console.error('[@agent-governance-sdk/sdk] Audit log write failed:', err.message);
     });
   }
 

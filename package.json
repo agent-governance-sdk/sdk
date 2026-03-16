@@ -1,5 +1,5 @@
 {
-  "name": "agent-governance-sdk",
+  "name": "@agent-governance-sdk/sdk",
   "version": "0.1.0",
   "description": "Production-grade audit logging, human oversight gates, and EU AI Act compliance reporting for AI agent deployments.",
   "type": "module",
@@ -30,15 +30,18 @@
     "openai",
     "audit-log"
   ],
-  "author": "Aptum <sdk@getaptum.app>",
+  "author": "Agent Governance Contributors",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aptum/agent-governance-sdk"
+    "url": "https://github.com/agent-governance-sdk/sdk"
   },
-  "homepage": "https://github.com/aptum/agent-governance-sdk#readme",
+  "homepage": "https://github.com/agent-governance-sdk/sdk#readme",
   "bugs": {
-    "url": "https://github.com/aptum/agent-governance-sdk/issues"
+    "url": "https://github.com/agent-governance-sdk/sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {},
   "devDependencies": {

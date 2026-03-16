@@ -3,7 +3,7 @@
  * Wraps CrewAI task execution in governance audit entries.
  *
  * @example
- * import { withGovernance } from 'agent-governance-sdk/adapters/crewai';
+ * import { withGovernance } from '@agent-governance-sdk/sdk/adapters/crewai';
  *
  * const crew = new Crew({ agents, tasks });
  * const governedCrew = withGovernance(crew, auditLog, {

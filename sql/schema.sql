@@ -1,4 +1,4 @@
--- agent-governance-sdk schema
+-- @agent-governance-sdk/sdk schema
 -- Compatible with PostgreSQL 14+, Supabase, Neon, Railway
 -- For SQLite, see sql/schema.sqlite.sql
 

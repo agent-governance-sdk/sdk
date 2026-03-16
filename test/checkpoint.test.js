@@ -78,6 +78,6 @@ describe('HumanCheckpoint', () => {
     const decisions = adapter.decisions;
     expect(decisions[0].decision).toBe('approve');
     expect(decisions[0].rationale).toBe('Strong technical fit');
-    expect(JSON.parse(decisions[0].context).fit_score).toBe(87);
+    expect(decisions[0].context.fit_score).toBe(87);
   });
 });

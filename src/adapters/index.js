@@ -1,5 +1,5 @@
 /**
- * Adapter interface for agent-governance-sdk storage.
+ * Adapter interface for @agent-governance-sdk/sdk storage.
  *
  * Implement this interface to use any storage backend.
  * The SDK ships three adapters: postgres, sqlite, memory.

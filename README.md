@@ -1,4 +1,4 @@
-# agent-governance-sdk
+# @agent-governance-sdk/sdk
 
 Production-grade audit logging, human oversight gates, and EU AI Act
 compliance reporting for AI agent deployments.
@@ -15,13 +15,13 @@ government procurement data.
 ## Install
 
 ```bash
-npm install agent-governance-sdk
+npm install @agent-governance-sdk/sdk
 ```
 
 ## Quickstart
 
 ```javascript
-import { createGovernance, MemoryAdapter, HumanCheckpointError } from 'agent-governance-sdk';
+import { createGovernance, MemoryAdapter, HumanCheckpointError } from '@agent-governance-sdk/sdk';
 
 const adapter = new MemoryAdapter();
 const { auditLog, checkpoint, compliance } = createGovernance(adapter, {
@@ -125,7 +125,7 @@ alter table agent_audit_log force row level security;
 ```
 
 ```javascript
-import { createGovernance, PostgresAdapter } from 'agent-governance-sdk';
+import { createGovernance, PostgresAdapter } from '@agent-governance-sdk/sdk';
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(url, serviceRoleKey);
@@ -149,7 +149,7 @@ const adapter = new PostgresAdapter({ pool });
 ### LangChain
 
 ```javascript
-import { withGovernance } from 'agent-governance-sdk/adapters/langchain';
+import { withGovernance } from '@agent-governance-sdk/sdk/adapters/langchain';
 import { ChatAnthropic } from '@langchain/anthropic';
 
 const model = new ChatAnthropic({ model: 'claude-sonnet-4-6' });
@@ -160,7 +160,7 @@ const response = await governed.invoke(messages);
 ### LangGraph
 
 ```javascript
-import { governedNode } from 'agent-governance-sdk/adapters/langgraph';
+import { governedNode } from '@agent-governance-sdk/sdk/adapters/langgraph';
 
 const scoringNode = governedNode(auditLog, { agent: 'scoring', model: 'claude-sonnet-4-6' },
   async (state) => {
@@ -174,7 +174,7 @@ const graph = new StateGraph({ channels }).addNode('scoring', scoringNode).compi
 ### AutoGen
 
 ```javascript
-import { withGovernance } from 'agent-governance-sdk/adapters/autogen';
+import { withGovernance } from '@agent-governance-sdk/sdk/adapters/autogen';
 
 const agent = new AssistantAgent({ name: 'scoring', llm_config });
 const governed = withGovernance(agent, auditLog, { agent: 'scoring' });
@@ -183,7 +183,7 @@ const governed = withGovernance(agent, auditLog, { agent: 'scoring' });
 ### CrewAI
 
 ```javascript
-import { withGovernance } from 'agent-governance-sdk/adapters/crewai';
+import { withGovernance } from '@agent-governance-sdk/sdk/adapters/crewai';
 
 const crew = new Crew({ agents, tasks });
 const governed = withGovernance(crew, auditLog, { agent: 'crewai' });
@@ -201,7 +201,7 @@ const result = await governed.kickoff();
 
 ## Architecture
 
-This SDK was extracted from the governance layer of [Aptum](https://getaptum.app), a production proposal intelligence platform for government contractors. The `agent_audit_log` table has been immutable since deployment, accumulating a tamper-evident record of every agent action. The human decision gate has processed real bid/no-bid decisions on federal procurement opportunities. This is not a reference implementation — it is a production pattern.
+This SDK was extracted from the governance layer of [Aptum](https://getaptum.app), a production proposal intelligence platform for government contractors. The `agent_audit_log` table has been immutable since deployment, accumulating a tamper-evident record of every agent action. The human decision gate has processed real bid/no-bid decisions on US federal and Mexico federal procurement opportunities. This is not a reference implementation — it is a production pattern.
 
 Zero runtime dependencies. The library uses your application's existing database client (Supabase, pg, or any adapter you implement). Governance infrastructure should not add dependency surface area to the applications it governs.
 

@@ -3,7 +3,7 @@
  * Wraps AutoGen agent message handling in governance audit entries.
  *
  * @example
- * import { withGovernance } from 'agent-governance-sdk/adapters/autogen';
+ * import { withGovernance } from '@agent-governance-sdk/sdk/adapters/autogen';
  *
  * const agent = new AssistantAgent({ name: 'scoring', llm_config });
  * const governedAgent = withGovernance(agent, auditLog, {

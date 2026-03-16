@@ -1,5 +1,5 @@
 /**
- * Basic example — agent-governance-sdk
+ * Basic example — @agent-governance-sdk/sdk
  *
  * Run: node examples/basic/index.js
  * No database required — uses the in-memory adapter.

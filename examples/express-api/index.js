@@ -1,5 +1,5 @@
 /**
- * Express API example — agent-governance-sdk
+ * Express API example — @agent-governance-sdk/sdk
  *
  * Requires: npm install express
  * Shows governance middleware for an Express API.
