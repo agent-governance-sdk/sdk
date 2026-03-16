@@ -1,0 +1,54 @@
+{
+  "name": "agent-governance-sdk",
+  "version": "0.1.0",
+  "description": "Production-grade audit logging, human oversight gates, and EU AI Act compliance reporting for AI agent deployments.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./adapters/postgres": "./src/adapters/postgres.js",
+    "./adapters/memory": "./src/adapters/memory.js",
+    "./adapters/langchain": "./src/adapters/langchain.js",
+    "./adapters/langgraph": "./src/adapters/langgraph.js",
+    "./adapters/autogen": "./src/adapters/autogen.js",
+    "./adapters/crewai": "./src/adapters/crewai.js"
+  },
+  "files": [
+    "src/",
+    "sql/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai-governance",
+    "eu-ai-act",
+    "agent-audit",
+    "human-oversight",
+    "compliance",
+    "langchain",
+    "anthropic",
+    "openai",
+    "audit-log"
+  ],
+  "author": "Aptum <sdk@getaptum.app>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aptum/agent-governance-sdk"
+  },
+  "homepage": "https://github.com/aptum/agent-governance-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/aptum/agent-governance-sdk/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vitest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
