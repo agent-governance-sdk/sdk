@@ -201,7 +201,7 @@ const result = await governed.kickoff();
 
 ## Architecture
 
-This SDK was extracted from the governance layer of [Aptum](https://getaptum.app), a production proposal intelligence platform for government contractors. The `agent_audit_log` table has been immutable since deployment, accumulating a tamper-evident record of every agent action. The human decision gate has processed real bid/no-bid decisions on US federal and Mexico federal procurement opportunities. This is not a reference implementation — it is a production pattern.
+This SDK was extracted from the governance layer of [Aptum](https://getaptum.app), a production proposal intelligence platform for government contractors. The human decision gate has processed real bid/no-bid decisions on US federal and Mexico federal procurement opportunities — no draft proposal can be generated without an authenticated human decision recorded at the database layer. The `agent_audit_log` has been append-only and tamper-evident since March 2026. This is not a reference implementation — it is a production pattern.
 
 Zero runtime dependencies. The library uses your application's existing database client (Supabase, pg, or any adapter you implement). Governance infrastructure should not add dependency surface area to the applications it governs.
 
